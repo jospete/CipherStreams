@@ -15,7 +15,7 @@ and get a consistent API between both platforms.
 Install with cocoapods via git url:
 
 ```bash
-pod 'CipherStreams', :git => 'https://github.com/jospete/CipherStreams.git', :tag => '0.1.0'
+pod 'CipherStreams', :git => 'https://github.com/jospete/CipherStreams.git', :tag => '0.2.0'
 ```
 
 See the [Podfile API](https://guides.cocoapods.org/using/the-podfile.html#from-a-podspec-in-the-root-of-a-library-repo) for more info
