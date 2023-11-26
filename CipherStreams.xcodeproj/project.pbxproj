@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E0F21AC733A4C1C8523EF8E /* Pods_CipherStreams_CipherStreamsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9441E1F323819F0D979AD992 /* Pods_CipherStreams_CipherStreamsTests.framework */; };
+		224D7D5B2B12C5300093DA3F /* CipherStreams.docc in Sources */ = {isa = PBXBuildFile; fileRef = 224D7D5A2B12C5300093DA3F /* CipherStreams.docc */; };
+		224D7D612B12C5300093DA3F /* CipherStreams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D7D562B12C5300093DA3F /* CipherStreams.framework */; };
+		224D7D662B12C5300093DA3F /* CipherStreamsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D7D652B12C5300093DA3F /* CipherStreamsTests.swift */; };
+		224D7D672B12C5300093DA3F /* CipherStreams.h in Headers */ = {isa = PBXBuildFile; fileRef = 224D7D592B12C5300093DA3F /* CipherStreams.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		224D7D712B12C7730093DA3F /* AESEncryptedFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D7D702B12C7730093DA3F /* AESEncryptedFile.swift */; };
+		224D7D732B12C7830093DA3F /* CipherInputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D7D722B12C7830093DA3F /* CipherInputStream.swift */; };
+		224D7D752B12C7920093DA3F /* CipherOutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D7D742B12C7920093DA3F /* CipherOutputStream.swift */; };
+		224D7D772B12C7A10093DA3F /* CipherStreams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D7D762B12C7A10093DA3F /* CipherStreams.swift */; };
+		ACC6F3312A9BE59E82F7BD2E /* Pods_CipherStreams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0565807A69E3434A905FA712 /* Pods_CipherStreams.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		224D7D622B12C5300093DA3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 224D7D4D2B12C5300093DA3F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 224D7D552B12C5300093DA3F;
+			remoteInfo = CipherStreams;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0565807A69E3434A905FA712 /* Pods_CipherStreams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CipherStreams.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		224D7D562B12C5300093DA3F /* CipherStreams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CipherStreams.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		224D7D592B12C5300093DA3F /* CipherStreams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CipherStreams.h; sourceTree = "<group>"; };
+		224D7D5A2B12C5300093DA3F /* CipherStreams.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = CipherStreams.docc; sourceTree = "<group>"; };
+		224D7D602B12C5300093DA3F /* CipherStreamsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CipherStreamsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		224D7D652B12C5300093DA3F /* CipherStreamsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherStreamsTests.swift; sourceTree = "<group>"; };
+		224D7D702B12C7730093DA3F /* AESEncryptedFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESEncryptedFile.swift; sourceTree = "<group>"; };
+		224D7D722B12C7830093DA3F /* CipherInputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherInputStream.swift; sourceTree = "<group>"; };
+		224D7D742B12C7920093DA3F /* CipherOutputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherOutputStream.swift; sourceTree = "<group>"; };
+		224D7D762B12C7A10093DA3F /* CipherStreams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherStreams.swift; sourceTree = "<group>"; };
+		273CAD3013E7AB4124F02762 /* Pods-CipherStreams-CipherStreamsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CipherStreams-CipherStreamsTests.release.xcconfig"; path = "Target Support Files/Pods-CipherStreams-CipherStreamsTests/Pods-CipherStreams-CipherStreamsTests.release.xcconfig"; sourceTree = "<group>"; };
+		56AFD3771203220181F7E37B /* Pods-CipherStreams-CipherStreamsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CipherStreams-CipherStreamsTests.debug.xcconfig"; path = "Target Support Files/Pods-CipherStreams-CipherStreamsTests/Pods-CipherStreams-CipherStreamsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		73095FA430B321E311A8D4FB /* Pods-CipherStreams.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CipherStreams.debug.xcconfig"; path = "Target Support Files/Pods-CipherStreams/Pods-CipherStreams.debug.xcconfig"; sourceTree = "<group>"; };
+		9441E1F323819F0D979AD992 /* Pods_CipherStreams_CipherStreamsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CipherStreams_CipherStreamsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B53E8FBD0FEA92F03FBF4EAD /* Pods-CipherStreams.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CipherStreams.release.xcconfig"; path = "Target Support Files/Pods-CipherStreams/Pods-CipherStreams.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		224D7D532B12C5300093DA3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC6F3312A9BE59E82F7BD2E /* Pods_CipherStreams.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		224D7D5D2B12C5300093DA3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224D7D612B12C5300093DA3F /* CipherStreams.framework in Frameworks */,
+				1E0F21AC733A4C1C8523EF8E /* Pods_CipherStreams_CipherStreamsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		224D7D4C2B12C5300093DA3F = {
+			isa = PBXGroup;
+			children = (
+				224D7D582B12C5300093DA3F /* CipherStreams */,
+				224D7D642B12C5300093DA3F /* CipherStreamsTests */,
+				224D7D572B12C5300093DA3F /* Products */,
+				F9E0C60AAE7A0E9BF134B82E /* Pods */,
+				2ADE6FE55643332EC70416B3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		224D7D572B12C5300093DA3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				224D7D562B12C5300093DA3F /* CipherStreams.framework */,
+				224D7D602B12C5300093DA3F /* CipherStreamsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		224D7D582B12C5300093DA3F /* CipherStreams */ = {
+			isa = PBXGroup;
+			children = (
+				224D7D592B12C5300093DA3F /* CipherStreams.h */,
+				224D7D5A2B12C5300093DA3F /* CipherStreams.docc */,
+				224D7D702B12C7730093DA3F /* AESEncryptedFile.swift */,
+				224D7D722B12C7830093DA3F /* CipherInputStream.swift */,
+				224D7D742B12C7920093DA3F /* CipherOutputStream.swift */,
+				224D7D762B12C7A10093DA3F /* CipherStreams.swift */,
+			);
+			path = CipherStreams;
+			sourceTree = "<group>";
+		};
+		224D7D642B12C5300093DA3F /* CipherStreamsTests */ = {
+			isa = PBXGroup;
+			children = (
+				224D7D652B12C5300093DA3F /* CipherStreamsTests.swift */,
+			);
+			path = CipherStreamsTests;
+			sourceTree = "<group>";
+		};
+		2ADE6FE55643332EC70416B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0565807A69E3434A905FA712 /* Pods_CipherStreams.framework */,
+				9441E1F323819F0D979AD992 /* Pods_CipherStreams_CipherStreamsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9E0C60AAE7A0E9BF134B82E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73095FA430B321E311A8D4FB /* Pods-CipherStreams.debug.xcconfig */,
+				B53E8FBD0FEA92F03FBF4EAD /* Pods-CipherStreams.release.xcconfig */,
+				56AFD3771203220181F7E37B /* Pods-CipherStreams-CipherStreamsTests.debug.xcconfig */,
+				273CAD3013E7AB4124F02762 /* Pods-CipherStreams-CipherStreamsTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		224D7D512B12C5300093DA3F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224D7D672B12C5300093DA3F /* CipherStreams.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		224D7D552B12C5300093DA3F /* CipherStreams */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 224D7D6A2B12C5300093DA3F /* Build configuration list for PBXNativeTarget "CipherStreams" */;
+			buildPhases = (
+				1591BC1BB0BE32D6BEF6687F /* [CP] Check Pods Manifest.lock */,
+				224D7D512B12C5300093DA3F /* Headers */,
+				224D7D522B12C5300093DA3F /* Sources */,
+				224D7D532B12C5300093DA3F /* Frameworks */,
+				224D7D542B12C5300093DA3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CipherStreams;
+			productName = CipherStreams;
+			productReference = 224D7D562B12C5300093DA3F /* CipherStreams.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		224D7D5F2B12C5300093DA3F /* CipherStreamsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 224D7D6D2B12C5300093DA3F /* Build configuration list for PBXNativeTarget "CipherStreamsTests" */;
+			buildPhases = (
+				060E8CEE5B3E6CD4B9DAB7F1 /* [CP] Check Pods Manifest.lock */,
+				224D7D5C2B12C5300093DA3F /* Sources */,
+				224D7D5D2B12C5300093DA3F /* Frameworks */,
+				224D7D5E2B12C5300093DA3F /* Resources */,
+				0BC521D0E6EAB97550580AA8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				224D7D632B12C5300093DA3F /* PBXTargetDependency */,
+			);
+			name = CipherStreamsTests;
+			productName = CipherStreamsTests;
+			productReference = 224D7D602B12C5300093DA3F /* CipherStreamsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		224D7D4D2B12C5300093DA3F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					224D7D552B12C5300093DA3F = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					224D7D5F2B12C5300093DA3F = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 224D7D502B12C5300093DA3F /* Build configuration list for PBXProject "CipherStreams" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 224D7D4C2B12C5300093DA3F;
+			productRefGroup = 224D7D572B12C5300093DA3F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				224D7D552B12C5300093DA3F /* CipherStreams */,
+				224D7D5F2B12C5300093DA3F /* CipherStreamsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		224D7D542B12C5300093DA3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		224D7D5E2B12C5300093DA3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		060E8CEE5B3E6CD4B9DAB7F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CipherStreams-CipherStreamsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0BC521D0E6EAB97550580AA8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CipherStreams-CipherStreamsTests/Pods-CipherStreams-CipherStreamsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CipherStreams-CipherStreamsTests/Pods-CipherStreams-CipherStreamsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CipherStreams-CipherStreamsTests/Pods-CipherStreams-CipherStreamsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1591BC1BB0BE32D6BEF6687F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CipherStreams-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		224D7D522B12C5300093DA3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224D7D712B12C7730093DA3F /* AESEncryptedFile.swift in Sources */,
+				224D7D772B12C7A10093DA3F /* CipherStreams.swift in Sources */,
+				224D7D732B12C7830093DA3F /* CipherInputStream.swift in Sources */,
+				224D7D5B2B12C5300093DA3F /* CipherStreams.docc in Sources */,
+				224D7D752B12C7920093DA3F /* CipherOutputStream.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		224D7D5C2B12C5300093DA3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224D7D662B12C5300093DA3F /* CipherStreamsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		224D7D632B12C5300093DA3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 224D7D552B12C5300093DA3F /* CipherStreams */;
+			targetProxy = 224D7D622B12C5300093DA3F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		224D7D682B12C5300093DA3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		224D7D692B12C5300093DA3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		224D7D6B2B12C5300093DA3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73095FA430B321E311A8D4FB /* Pods-CipherStreams.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.obsidize.CipherStreams;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		224D7D6C2B12C5300093DA3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B53E8FBD0FEA92F03FBF4EAD /* Pods-CipherStreams.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.obsidize.CipherStreams;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		224D7D6E2B12C5300093DA3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56AFD3771203220181F7E37B /* Pods-CipherStreams-CipherStreamsTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.obsidize.CipherStreamsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		224D7D6F2B12C5300093DA3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 273CAD3013E7AB4124F02762 /* Pods-CipherStreams-CipherStreamsTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.obsidize.CipherStreamsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		224D7D502B12C5300093DA3F /* Build configuration list for PBXProject "CipherStreams" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				224D7D682B12C5300093DA3F /* Debug */,
+				224D7D692B12C5300093DA3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		224D7D6A2B12C5300093DA3F /* Build configuration list for PBXNativeTarget "CipherStreams" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				224D7D6B2B12C5300093DA3F /* Debug */,
+				224D7D6C2B12C5300093DA3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		224D7D6D2B12C5300093DA3F /* Build configuration list for PBXNativeTarget "CipherStreamsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				224D7D6E2B12C5300093DA3F /* Debug */,
+				224D7D6F2B12C5300093DA3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 224D7D4D2B12C5300093DA3F /* Project object */;
+}
