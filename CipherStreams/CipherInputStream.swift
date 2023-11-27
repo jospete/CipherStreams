@@ -13,10 +13,10 @@ public class CipherInputStream : InputStreamLike {
     private var stream: InputStreamLike
     private var innerBuffer: Array<UInt8>
     private var _status: CipherStreamStatus = .commonCrypto(.success)
-    private var _closed = false
+    private var _state: CipherStreamState = .opened // inner stream comes in already opened
     
     public var status: CipherStreamStatus { self._status }
-    public var closed: Bool { self._closed }
+    public var closed: Bool { self._state == .closed }
     public var hasCipherUpdateFailure: Bool { self.status != .commonCrypto(.success) }
     public var hasBytesAvailable: Bool { self.stream.hasBytesAvailable }
     
@@ -28,13 +28,22 @@ public class CipherInputStream : InputStreamLike {
         self.innerBuffer = Array<UInt8>(repeating: 0, count: capacity)
     }
     
+    public func open() {
+        if self._state != .initial {
+            return
+        }
+        
+        self.stream.open()
+        self._state = .opened
+    }
+    
     public func close() {
         if self.closed {
             return
         }
         
         self.stream.close()
-        self._closed = true
+        self._state = .closed
     }
 
     public func read(_ buffer: UnsafeMutablePointer<UInt8>, maxLength len: Int) -> Int {

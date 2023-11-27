@@ -12,6 +12,12 @@ let CIPHER_STREAM_DEFAULT_BLOCK_SIZE: Int = 1024
 let CIPHER_STREAM_MAX_BLOCK_SIZE: Int = CIPHER_STREAM_DEFAULT_BLOCK_SIZE * 16
 let CIPHER_STREAM_ERROR_RESULT: Int = -1
 
+public enum CipherStreamState: Equatable {
+    case initial,
+    opened,
+    closed
+}
+
 public enum CipherStreamStatus : Error, Equatable {
     case innerTransferError,
     outerTransferError,
@@ -20,6 +26,7 @@ public enum CipherStreamStatus : Error, Equatable {
 }
 
 public protocol StreamLike {
+    func open() -> Void
     func close() -> Void
 }
 

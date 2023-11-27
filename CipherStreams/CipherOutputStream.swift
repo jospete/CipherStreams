@@ -13,10 +13,10 @@ public class CipherOutputStream : OutputStreamLike {
     private var stream: OutputStreamLike
     private var innerBuffer: Array<UInt8>
     private var _status: CipherStreamStatus = .commonCrypto(.success)
-    private var _closed = false
+    private var _state: CipherStreamState = .opened // inner stream comes in already opened
     
     public var status: CipherStreamStatus { self._status }
-    public var closed: Bool { self._closed }
+    public var closed: Bool { self._state == .closed }
     public var hasCipherUpdateFailure: Bool { self.status != .commonCrypto(.success) }
     
     // NOTE: given stream is expected to have already been opened
@@ -27,6 +27,15 @@ public class CipherOutputStream : OutputStreamLike {
         self.innerBuffer = Array<UInt8>(repeating: 0, count: capacity)
     }
     
+    public func open() {
+        if self._state != .initial {
+            return
+        }
+        
+        self.stream.open()
+        self._state = .opened
+    }
+    
     public func close() {
         if self.closed {
             return
@@ -34,7 +43,7 @@ public class CipherOutputStream : OutputStreamLike {
         
         self.writeFinal()
         self.stream.close()
-        self._closed = true
+        self._state = .closed
     }
 
     @discardableResult

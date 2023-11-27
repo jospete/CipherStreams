@@ -10,15 +10,13 @@ import IDZSwiftCommonCrypto
 
 public class AESEncryptedFile {
     public enum Error : Swift.Error {
-        case createStreamFailure, headerWriteFailure, headerReadFailure
+        case createStreamFailure
     }
     
     private static let defaultSalt = "nevergonnagiveyouup"
     
     private let filePath: URL
-    private let key: Array<UInt8>
-    // Not currently configurable since anything but PKCS7 will break with misalignment errors
-    private let padding: Cryptor.Padding = .PKCS7Padding
+    private let producer: CipherStreamProducer
     
     public convenience init(_ filePath: URL) throws {
         let password = try CryptoUtility.deriveStreamPassword(filePath.lastPathComponent)
@@ -36,7 +34,7 @@ public class AESEncryptedFile {
     
     public init(_ filePath: URL, key: Array<UInt8>) {
         self.filePath = filePath
-        self.key = key
+        self.producer = CipherStreamProducer.usingAES(key: key)
     }
     
     private static func deriveKey(_ password: String, salt: String) -> Array<UInt8> {
@@ -54,36 +52,12 @@ public class AESEncryptedFile {
             throw Error.createStreamFailure
         }
         
-        innerStream.open()
-        
-        let algorithm = Cryptor.Algorithm.aes
-        let blockSize = algorithm.blockSize()
-        
-        // slice off the IV from the start of the file
-        var iv = [UInt8](repeating: 0, count: blockSize)
-        let bytesRead = innerStream.read(&iv, maxLength: iv.count)
-        
-        if bytesRead != iv.count {
-            innerStream.close()
-            throw Error.headerReadFailure
-        }
-        
-        let cryptor = StreamCryptor(
-            operation: .decrypt,
-            algorithm: algorithm,
-            mode: .CBC,
-            padding: self.padding,
-            key: self.key,
-            iv: iv
+        let result = try self.producer.openInputStreamDecryptor(
+            source: innerStream,
+            withCapacity: withCapacity
         )
         
-        let capacity = withCapacity ?? CIPHER_STREAM_DEFAULT_BLOCK_SIZE
-        
-        return CipherInputStream(
-            cryptor,
-            forStream: innerStream,
-            initialCapacity: capacity
-        )
+        return result
     }
     
     public func openOutputStream(withCapacity: Int? = nil) throws -> CipherOutputStream {
@@ -91,35 +65,11 @@ public class AESEncryptedFile {
             throw Error.createStreamFailure
         }
         
-        let algorithm = Cryptor.Algorithm.aes
-        let blockSize = algorithm.blockSize()
-        let iv = try Random.generateBytes(byteCount: blockSize)
-        
-        let cryptor = StreamCryptor(
-            operation: .encrypt,
-            algorithm: algorithm,
-            mode: .CBC,
-            padding: self.padding,
-            key: self.key,
-            iv: iv
+        let result = try self.producer.openOutputStreamEncryptor(
+            source: innerStream,
+            withCapacity: withCapacity
         )
         
-        innerStream.open()
-        
-        // write IV as the header of the file so we can decrypt it later
-        let bytesWritten = innerStream.write(iv, maxLength: iv.count)
-        
-        if bytesWritten != iv.count {
-            innerStream.close()
-            throw Error.headerWriteFailure
-        }
-        
-        let capacity = withCapacity ?? CIPHER_STREAM_DEFAULT_BLOCK_SIZE
-        
-        return CipherOutputStream(
-            cryptor,
-            forStream: innerStream,
-            initialCapacity: capacity
-        )
+        return result
     }
 }

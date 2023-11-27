@@ -16,6 +16,7 @@
 		224D7D732B12C7830093DA3F /* CipherInputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D7D722B12C7830093DA3F /* CipherInputStream.swift */; };
 		224D7D752B12C7920093DA3F /* CipherOutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D7D742B12C7920093DA3F /* CipherOutputStream.swift */; };
 		224D7D772B12C7A10093DA3F /* CipherStreams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D7D762B12C7A10093DA3F /* CipherStreams.swift */; };
+		2292D09C2B14FB2C00C0413F /* CipherStreamProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292D09B2B14FB2C00C0413F /* CipherStreamProducer.swift */; };
 		ACC6F3312A9BE59E82F7BD2E /* Pods_CipherStreams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0565807A69E3434A905FA712 /* Pods_CipherStreams.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		224D7D722B12C7830093DA3F /* CipherInputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherInputStream.swift; sourceTree = "<group>"; };
 		224D7D742B12C7920093DA3F /* CipherOutputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherOutputStream.swift; sourceTree = "<group>"; };
 		224D7D762B12C7A10093DA3F /* CipherStreams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherStreams.swift; sourceTree = "<group>"; };
+		2292D09B2B14FB2C00C0413F /* CipherStreamProducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherStreamProducer.swift; sourceTree = "<group>"; };
 		273CAD3013E7AB4124F02762 /* Pods-CipherStreams-CipherStreamsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CipherStreams-CipherStreamsTests.release.xcconfig"; path = "Target Support Files/Pods-CipherStreams-CipherStreamsTests/Pods-CipherStreams-CipherStreamsTests.release.xcconfig"; sourceTree = "<group>"; };
 		56AFD3771203220181F7E37B /* Pods-CipherStreams-CipherStreamsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CipherStreams-CipherStreamsTests.debug.xcconfig"; path = "Target Support Files/Pods-CipherStreams-CipherStreamsTests/Pods-CipherStreams-CipherStreamsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		73095FA430B321E311A8D4FB /* Pods-CipherStreams.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CipherStreams.debug.xcconfig"; path = "Target Support Files/Pods-CipherStreams/Pods-CipherStreams.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				224D7D722B12C7830093DA3F /* CipherInputStream.swift */,
 				224D7D742B12C7920093DA3F /* CipherOutputStream.swift */,
 				224D7D762B12C7A10093DA3F /* CipherStreams.swift */,
+				2292D09B2B14FB2C00C0413F /* CipherStreamProducer.swift */,
 			);
 			path = CipherStreams;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			files = (
 				224D7D712B12C7730093DA3F /* AESEncryptedFile.swift in Sources */,
 				224D7D772B12C7A10093DA3F /* CipherStreams.swift in Sources */,
+				2292D09C2B14FB2C00C0413F /* CipherStreamProducer.swift in Sources */,
 				224D7D732B12C7830093DA3F /* CipherInputStream.swift in Sources */,
 				224D7D5B2B12C5300093DA3F /* CipherStreams.docc in Sources */,
 				224D7D752B12C7920093DA3F /* CipherOutputStream.swift in Sources */,
