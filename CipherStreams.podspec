@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CipherStreams"
-  s.version      = "0.2.0"
+  s.version      = "1.0.0"
   s.summary      = "High-level API for reading and writing large encrypted files"
 
   s.homepage     = "https://github.com/jospete/CipherStreams"
