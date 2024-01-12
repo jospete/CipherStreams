@@ -28,23 +28,13 @@ public class AESEncryptedFile {
     }
     
     public convenience init(_ filePath: URL, password: String, salt: String) {
-        let key = AESEncryptedFile.deriveKey(password, salt: salt)
+        let key = CryptoUtility.deriveAes128Key(password, salt: salt)
         self.init(filePath, key: key)
     }
     
     public init(_ filePath: URL, key: Array<UInt8>) {
         self.filePath = filePath
         self.producer = CipherStreamProducer.usingAES(key: key)
-    }
-    
-    private static func deriveKey(_ password: String, salt: String) -> Array<UInt8> {
-        return PBKDF.deriveKey(
-            password: password,
-            salt: salt,
-            prf: .sha256,
-            rounds: 8,
-            derivedKeyLength: 16 /* AES-128 */
-        )
     }
     
     public func openInputStream(withCapacity: Int? = nil) throws -> CipherInputStream {

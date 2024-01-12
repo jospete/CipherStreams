@@ -92,6 +92,16 @@ public class CryptoUtility {
         return "\(fingerprint)+\(input)"
     }
     
+    public static func deriveAes128Key(_ password: String, salt: String) -> Array<UInt8> {
+        return PBKDF.deriveKey(
+            password: password,
+            salt: salt,
+            prf: .sha256,
+            rounds: 8,
+            derivedKeyLength: 16 /* AES-128 */
+        )
+    }
+    
     private static func loadLoggerIdentifier() throws -> String {
 
         let key = "loggerId"

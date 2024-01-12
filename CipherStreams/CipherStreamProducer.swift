@@ -51,7 +51,7 @@ public class CipherStreamProducer {
     }
     
     // NOTE: assumes the source stream is already open
-    public func createInputStreamCipher(
+    public func createInputStream(
         source innerStream: InputStreamLike,
         operation: Cryptor.Operation,
         iv: Array<UInt8>,
@@ -68,7 +68,7 @@ public class CipherStreamProducer {
     }
     
     // NOTE: assumes the source stream is already open
-    public func createOutputStreamCipher(
+    public func createOutputStream(
         source innerStream: OutputStreamLike,
         operation: Cryptor.Operation,
         iv: Array<UInt8>,
@@ -93,7 +93,7 @@ public class CipherStreamProducer {
         
         let blockSize = self.algorithm.blockSize()
         
-        // slice off the IV from the start of the file
+        // slice off the IV from the start of the stream
         var iv = Array<UInt8>(repeating: 0, count: blockSize)
         let bytesRead = innerStream.read(&iv, maxLength: iv.count)
         
@@ -102,7 +102,7 @@ public class CipherStreamProducer {
             throw Error.headerReadFailure
         }
         
-        return self.createInputStreamCipher(
+        return self.createInputStream(
             source: innerStream,
             operation: .decrypt,
             iv: iv,
@@ -120,7 +120,7 @@ public class CipherStreamProducer {
         
         innerStream.open()
         
-        // write IV as the header of the file so we can decrypt it later
+        // write IV as the header of the stream so we can decrypt it later
         let bytesWritten = innerStream.writeBytes(iv)
         
         if bytesWritten != iv.count {
@@ -128,7 +128,7 @@ public class CipherStreamProducer {
             throw Error.headerWriteFailure
         }
         
-        return self.createOutputStreamCipher(
+        return self.createOutputStream(
             source: innerStream,
             operation: .encrypt,
             iv: iv,
